@@ -99,3 +99,19 @@ export function initCurrentQuestion() {
     payload: {}
   };
 }
+
+export function resetCurrent() {
+  return {
+    type: 'RESETCURRENT',
+    payload: {}
+  };
+}
+
+export function setIntervalId(id) {
+  return {
+    type: 'SETID',
+    payload: {
+      id
+    }
+  };
+}

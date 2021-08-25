@@ -10,6 +10,9 @@ function currentQuestionReducer(state = 0, action) {
       
     case 'PREV':
       return prev(state);
+
+    case 'RESETCURRENT':
+      return resetCurrent();
       
     default:
       return state;
@@ -36,4 +39,9 @@ function init() {
     sessionStorage.setItem('currentQuestion','0');
     return 0;
   }
+}
+
+function resetCurrent() {
+  sessionStorage.setItem('currentQuestion','0');
+  return 0;
 }

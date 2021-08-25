@@ -7,7 +7,9 @@
   --progress: 0;
   --blue: hsl(211.2,100%,40%);
   width: 100%;
-  max-width: 900px;
+  /* max-width: 900px; */
+  background-color: hsl(170.8,23.6%,80%);
+  border-top: 1px solid hsl(170.8,23.6%,60%);
 }
 
 .progress .buttons {
@@ -84,8 +86,12 @@
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
  .progress .buttons p {
     display: block;
+  }
+
+  .progress {
+    padding: 10px calc((100vw - 900px) / 2);
   }
 }

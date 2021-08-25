@@ -1,10 +1,12 @@
 import './statistics.css';
-import {useSelector} from 'react-redux';
+import {useSelector,useDispatch} from 'react-redux';
+import {resetCounter,resetAnswers,stop,resetCurrent} from '../actions';
 
 export default function Stats({data}) {
   const {answers} = useSelector(state=>state);
   let correct=0, incorrect=0, unattempt=0,total=data.length;
-  
+  const dispatch = useDispatch();
+
   for(let i=0; i<data.length; i++) {
     console.log(answers[i],data[i].answer)
     if (answers[i]===null) unattempt++;
@@ -14,18 +16,29 @@ export default function Stats({data}) {
   
   let correctDeg = correct/total*360;
   let incorrectDeg = incorrect/total*360 + correctDeg;
-  let unattemptDeg = unattempt/total*360 + incorrectDeg;
   
   const style = {
-    "--correct": `${correctDeg}deg`,
-    "--incorrect": `${incorrectDeg}deg`,
-    "--unattempt": `${unattemptDeg}deg`
+    background: `
+      conic-gradient(
+        var(--success) 0deg,
+        var(--success) ${correctDeg}deg,
+        var(--danger) ${correctDeg}deg,
+        var(--danger) ${incorrectDeg}deg,
+        var(--warn) ${incorrectDeg}deg,
+        var(--warn) 360deg
+      )
+    `
   }
   
-  console.log(style)
+  function resetAll() {
+    dispatch(resetCounter());
+    dispatch(resetAnswers());
+    dispatch(resetCurrent());
+    dispatch(stop());
+  }
   
   return (
-    <div className="statistics" style={style}>
+    <div className="statistics">
       <h1>Statistics</h1>
       <div className="summary">
         <p className="success"><strong>Correct: {correct}</strong></p>
@@ -33,8 +46,10 @@ export default function Stats({data}) {
         <p className="warn"><strong>Unattempted: {unattempt}</strong></p>
       </div>
       <div className="pie-wrapper">
-        <div className="pie"></div>
+        <div className="pie" style={style}></div>
       </div>
+
+      <button onClick={resetAll}>Close</button>
     </div>
   );
 }

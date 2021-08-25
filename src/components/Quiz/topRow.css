@@ -1,17 +1,23 @@
 .top-row {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
   padding: .5em;
   align-items: center;
   font-size: 1rem;
   position: relative;
+  font-weight: bold;
+  background-color: hsl(170.8,23.6%,80%);
+  border-bottom: 1px solid hsl(170.8,23.6%,60%);
 }
 
 .top-row button {
   height: 40px;
   padding: 0 .4em;
   font-size: .8rem;
+  font-weight: bold;
+  border: .1em solid black;
+  border-radius: .3em;
 }
 
 .timer {

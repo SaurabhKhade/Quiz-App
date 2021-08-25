@@ -1,18 +1,22 @@
 .statistics {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 20px 10px;
   --success: rgb(42,211,0);
   --danger: rgb(243,60,0);
   --warn: rgb(243,177,0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .statistics h1 {
   text-align: center;
+  margin: 0;
   margin-bottom: 20px;
 }
 
 .summary {
-  margin-left: 10px;
+  margin: 10px auto;
   display: inline-block;
   /* border: 1px solid red; */
   border-radius: 5px;
@@ -36,23 +40,22 @@
 }
 
 .pie-wrapper {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 20px 0;
   display: grid;
   place-items: center;
 }
 
 .pie {
-  height: 15rem;
-  width: 15rem;
+  height: 50vmin;
+  width: 50vmin;
   border: 1px solid black;
   border-radius: 50%;
-  background: conic-gradient(
-    var(--success) 0deg,
-    var(--success) var(--correct,0deg),
-    var(--danger) var(--correct,0deg),
-    var(--danger) var(--danger,0deg),
-    var(--warn) var(--danger,0deg),
-    var(--warn) 360deg
-  );
+}
+
+.statistics button {
+  padding: .4em .7em;
+  border: .1em solid black;
+  font-weight: bold;
+  font-size: 1rem;
 }

@@ -7,7 +7,7 @@ import Statistics from './statistics';
 
 import {useEffect,useState} from 'react';
 import {useSelector,useDispatch} from 'react-redux';
-import {initAnswers,initCounter,elapse,initCurrentQuestion} from '../actions';
+import {initAnswers,initCounter,elapse,initCurrentQuestion,setIntervalId} from '../actions';
 
 export default function Quiz() {
   const {answers,currentQuestion} = useSelector(state=>state);
@@ -19,7 +19,11 @@ export default function Quiz() {
     dispatch(initAnswers(data.length));
     dispatch(initCounter(data.length));
     dispatch(initCurrentQuestion());
-    setInterval(()=>dispatch(elapse()),1000);
+    let id = setInterval(()=>dispatch(elapse()),1000);
+    dispatch(setIntervalId(id));
+    return ()=>{
+      clearInterval(id);
+    }
     // eslint-disable-next-line
   },[]);
   

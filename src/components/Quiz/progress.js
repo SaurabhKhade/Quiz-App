@@ -7,6 +7,7 @@ import {next,prev} from '../actions';
 
 export default function Progress({total,setSubmitted}) {
   const current = useSelector(state=>state.currentQuestion);
+  const intervalId = useSelector(state=>state.intervalId);
   const dispatch = useDispatch();
   
   const style = {
@@ -23,7 +24,12 @@ export default function Progress({total,setSubmitted}) {
   function nextQuestion() {
     dispatch(next(total-1));
   }
-  
+
+  function submit() {
+    clearInterval(intervalId);
+    setSubmitted(true);
+  }
+
   return (
     <div className="progress" style={style}>
       <div className="buttons" style={disabled}>
@@ -42,7 +48,7 @@ export default function Progress({total,setSubmitted}) {
         current===(total-1)?
         <div className="buttons">
           <p>Submit</p>&nbsp;&nbsp;
-          <AiOutlineUpload className="icon" onClick={()=>setSubmitted(true)}/>
+          <AiOutlineUpload className="icon" onClick={submit}/>
         </div>:
         <div className="buttons">
           <p>Next</p>&nbsp;&nbsp;
