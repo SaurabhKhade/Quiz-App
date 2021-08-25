@@ -3,29 +3,37 @@ import data from '../data.json';
 import TopRow from './topRow';
 import Progress from './progress';
 import Question from './question';
+import Statistics from './statistics';
 
 import {useEffect,useState} from 'react';
 import {useSelector,useDispatch} from 'react-redux';
-import {initAnswers,initCounter} from '../actions';
+import {initAnswers,initCounter,elapse,initCurrentQuestion} from '../actions';
 
 export default function Quiz() {
-  const {counter,answers} = useSelector(state=>state);
+  const {answers,currentQuestion} = useSelector(state=>state);
   const dispatch = useDispatch();
-  const [currentQuestion,setCurrentQuestion] = useState(6)
   
-  console.log(answers);
+  const [submitted,setSubmitted] = useState(false);
   
   useEffect(()=>{
     dispatch(initAnswers(data.length));
     dispatch(initCounter(data.length));
+    dispatch(initCurrentQuestion());
+    setInterval(()=>dispatch(elapse()),1000);
     // eslint-disable-next-line
   },[]);
   
   return (
     <div className="quiz">
-      <TopRow />
-      <Question {...data[currentQuestion]} selected={answers[currentQuestion]} />
-      <Progress />
+      {
+        submitted?
+        <Statistics data={data}/>:
+        <>
+        <TopRow setSubmitted={setSubmitted} />
+        <Question {...data[currentQuestion]} selected={answers[currentQuestion]} id={currentQuestion}/>
+        <Progress total={data.length} setSubmitted={setSubmitted}/>
+        </>
+      }
     </div>
   );
 }

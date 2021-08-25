@@ -4,20 +4,47 @@ function answerReducer(state = [], action) {
   
   switch (action.type) {
     case 'INITANSWERS':
-      return new Array(action.payload.length).fill(undefined);
+      return init(action.payload.length);
       
     case 'RESETANSWERS':
-      return [];
+      return reset();
       
     case 'SUBMITANSWER':
-      state[action.payload.id-1] = action.payload.answer;
-      return [...state];
+      return submit(action.payload.id,action.payload.answer,state);
       
     case 'CANCELANSWER':
-      state[action.payload.id-1] = undefined;
-      return [...state];
+      return cancel(action.payload.id,state);
       
     default:
       return state;
   }
+}
+
+function init(length) {
+  let answers = sessionStorage.getItem('answers');
+  if (answers) {
+    return JSON.parse(answers);
+  }
+  else {
+    answers = new Array(length).fill(null);
+    sessionStorage.setItem('answers',JSON.stringify(answers));
+    return answers;
+  }
+}
+
+function reset() {
+  sessionStorage.removeItem('answers');
+  return [];
+}
+
+function submit(id,answer,state) {
+  state[id] = answer;
+  sessionStorage.setItem('answers',JSON.stringify(state));
+  return [...state];
+}
+
+function cancel(id,state) {
+  state[id] = null;
+  sessionStorage.setItem('answers',JSON.stringify(state));
+  return [...state];
 }

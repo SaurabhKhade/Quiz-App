@@ -1,11 +1,33 @@
 import './progress.css';
 import {FaLongArrowAltLeft,FaLongArrowAltRight} from 'react-icons/fa';
+import {AiOutlineUpload} from 'react-icons/ai';
 
-export default function Progress() {
+import {useSelector,useDispatch} from 'react-redux';
+import {next,prev} from '../actions';
+
+export default function Progress({total,setSubmitted}) {
+  const current = useSelector(state=>state.currentQuestion);
+  const dispatch = useDispatch();
+  
+  const style = {
+    "--progress": `${(current+1)/total*100}%`
+  };
+  
+  const disabled = {
+    "opacity": current===0?'.5':'1'
+  };
+  
+  function previous() {
+    dispatch(prev());
+  }
+  function nextQuestion() {
+    dispatch(next(total-1));
+  }
+  
   return (
-    <div className="progress">
-      <div className="buttons">
-        <FaLongArrowAltLeft className="icon"/>
+    <div className="progress" style={style}>
+      <div className="buttons" style={disabled}>
+        <FaLongArrowAltLeft className="icon" onClick={previous}/>
         &nbsp;&nbsp;<p>Previous</p>
       </div>
       <div className="bar-wrapper">
@@ -16,10 +38,18 @@ export default function Progress() {
           </div>
         </div>
       </div>
-      <div className="buttons">
-        <p>Next</p>&nbsp;&nbsp;
-        <FaLongArrowAltRight className="icon"/>
-      </div>
+      {
+        current===(total-1)?
+        <div className="buttons">
+          <p>Submit</p>&nbsp;&nbsp;
+          <AiOutlineUpload className="icon" onClick={()=>setSubmitted(true)}/>
+        </div>:
+        <div className="buttons">
+          <p>Next</p>&nbsp;&nbsp;
+          <FaLongArrowAltRight className="icon" onClick={nextQuestion}/>
+        </div>
+      }
+      
     </div>
   );
 }

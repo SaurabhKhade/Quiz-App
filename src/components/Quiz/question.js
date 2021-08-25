@@ -1,15 +1,15 @@
 import './question.css';
-import {useDispatch} from 'react-redux';
+import {useDispatch,useSelector} from 'react-redux';
 import {submitAnswer,cancelAnswer} from '../actions';
 
 export default function Question(props) {
-  const {id,question,answer,options,selected} = props;
+  const {question,options} = props;
   const dispatch = useDispatch();
-
-  console.log(selected);
+  const {answers,currentQuestion:id} = useSelector(state=>state);
   
+  const selected = answers[id];
+
   function submit(ans) {
-    console.log(ans);
     dispatch(submitAnswer(id,ans));
   }
   

@@ -56,6 +56,13 @@ export function cancelAnswer(id) {
   };
 }
 
+export function initIsStarted() {
+  return {
+    type: 'INITISSTART',
+    payload: {}
+  };
+}
+
 export function start() {
   return {
     type: 'START',
@@ -66,6 +73,29 @@ export function start() {
 export function stop() {
   return {
     type: 'STOP',
+    payload: {}
+  };
+}
+
+export function next(last) {
+  return {
+    type: 'NEXT',
+    payload: {
+      last
+    }
+  };
+}
+
+export function prev() {
+  return {
+    type: 'PREV',
+    payload: {}
+  };
+}
+
+export function initCurrentQuestion() {
+  return {
+    type: 'INITCURRENT',
     payload: {}
   };
 }
