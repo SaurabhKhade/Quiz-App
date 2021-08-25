@@ -4,9 +4,27 @@
   justify-content: space-between;
   padding: .5em;
   align-items: center;
+  font-size: 1rem;
 }
 
 .top-row button {
   height: 40px;
   padding: 0 .4em;
+  font-size: .8rem;
+}
+
+@media screen and (max-width: 250px) {
+  .top-row {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .top-row {
+    font-size: 1.1rem;
+    padding: .5em .8em;
+  }
+  .top-row button {
+    font-size: 1rem;
+  }
 }

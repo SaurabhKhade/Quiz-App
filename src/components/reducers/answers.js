@@ -1,6 +1,7 @@
 export default answerReducer;
 
 function answerReducer(state = [], action) {
+  
   switch (action.type) {
     case 'INITANSWERS':
       return new Array(action.payload.length).fill(undefined);
@@ -9,14 +10,12 @@ function answerReducer(state = [], action) {
       return [];
       
     case 'SUBMITANSWER':
-      let {answer,id} = action.payload;
-      state[id-1] = answer;
+      state[action.payload.id-1] = action.payload.answer;
       return [...state];
       
     case 'CANCELANSWER':
-      id = action.payload.id;
-      state[id-1] = undefined;
-      return state;
+      state[action.payload.id-1] = undefined;
+      return [...state];
       
     default:
       return state;

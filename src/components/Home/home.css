@@ -1,6 +1,8 @@
 .home {
   height: 100%;
   padding: 2rem 1rem;
+  margin: 10px auto;
+  max-width: 900px;
 }
 
 .home h1,.home h2,.home h3 {

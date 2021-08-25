@@ -4,7 +4,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 6rem;
+  margin: 0 auto;
+  margin-top: r2em;
+  max-width: 550px;
 }
 
 .question {
@@ -31,11 +33,31 @@
 
 .options p {
   border: 1px solid hsl(0,0%,70%);
-  padding: 1em .5em;
+  padding: .6em .1em;
   border-radius: .3em;
   margin: 0;
   text-align: center;
   background-color: hsl(0,0%,85%);
   /* background-color: hsl(170.8,23.6%,80%); */
   text-transform: capitalize;
+}
+
+.options .selected {
+  background-color: rgb(77 223 77);
+}
+
+.question-box button {
+  margin-left: auto;
+  padding: .5em 1em;
+  border-radius: .3em;
+  border: .1em solid black;
+  font-weight: bold;
+  font-size: .7rem;
+}
+
+
+@media screen and (max-width: 200px) {
+  .options {
+    grid-template-columns: 1fr;
+  }
 }

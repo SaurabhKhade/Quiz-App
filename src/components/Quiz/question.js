@@ -1,10 +1,12 @@
 import './question.css';
 import {useDispatch} from 'react-redux';
-import {submitAnswer} from '../actions';
+import {submitAnswer,cancelAnswer} from '../actions';
 
 export default function Question(props) {
-  const {id,question,answer,options} = props;
+  const {id,question,answer,options,selected} = props;
   const dispatch = useDispatch();
+
+  console.log(selected);
   
   function submit(ans) {
     console.log(ans);
@@ -19,12 +21,18 @@ export default function Question(props) {
       <div className="options">
       {options.map(i=>{
         return (
-          <p onClick={()=>submit(i)}>
+          <p key={i} 
+            onClick={()=>submit(i)}
+            className={selected===i?'selected':''}>
             {i}
           </p>
         );
       })}
       </div>
+      {selected?
+        <button onClick={()=>dispatch(cancelAnswer(id))}>Clear</button>
+        :<></>
+      }
     </div>
   )
 }
