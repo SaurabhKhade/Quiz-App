@@ -1,0 +1,12 @@
+.top-row {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  padding: .5em;
+  align-items: center;
+}
+
+.top-row button {
+  height: 40px;
+  padding: 0 .4em;
+}

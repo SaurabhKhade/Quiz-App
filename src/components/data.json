@@ -1,0 +1,112 @@
+[
+  {
+    "id": "1",
+    "question": "What do the five rings on the Olympic symbol represent?",
+    "options": [
+      "the five oceans",
+      "the five continents",
+      "the five planets",
+      "five Greek Gods"
+    ],
+    "answer": "the five continents"
+  },
+  {
+    "id": "2",
+    "question": "The five rings of the Olympic symbol are in five different colours. Red, Green, Yellow, Blue and _______",
+    "options": [
+      "indigo",
+      "violet",
+      "orange",
+      "black"
+    ],
+    "answer": "black"
+  },
+  {
+    "id": "3",
+    "question": "Olympic games were held in ancient Greece in the honour of Greek God ________",
+    "options": [
+      "zeus",
+      "uranus",
+      "apollo",
+      "jupiter"
+    ],
+    "answer": "zeus"
+  },
+  {
+    "id": "4",
+    "question": "At which of the following cities have the Olympic games NOT been held twice?",
+    "options": [
+      "athens",
+      "paris",
+      "london",
+      "atlanta"
+    ],
+    "answer": "atlanta"
+  },
+  {
+    "id": "5",
+    "question": "In which year were the first modern Olympic Games held?",
+    "options": [
+      "1900",
+      "1896",
+      "1904",
+      "1892"
+    ],
+    "answer": "1896"
+  },
+  {
+    "id": "6",
+    "question": "Which of the following countries won the maximum number of medals at the first Olympic Games in 1896?",
+    "options": [
+      "Germany",
+      "Great Britain",
+      "USA",
+      "Greece"
+    ],
+    "answer": "Greece"
+  },
+  {
+    "id": "7",
+    "question": "Which language other than English is the Official language of the International Olympic Committee?",
+    "options": [
+      "chinese",
+      "french",
+      "spanish",
+      "german"
+    ],
+    "answer": "french"
+  },
+  {
+    "id": "8",
+    "question": "According to the Olympic charter, the duration of the competitions of the Olympic Games shall not exceed -",
+    "options": [
+      "20 days",
+      "15 days",
+      "12 days",
+      "16 days"
+    ],
+    "answer": "16 days"
+  },
+  {
+    "id": "9",
+    "question": "At which of the following Olympics were gold medals made of pure gold last awarded?",
+    "options": [
+      "1912",
+      "1920",
+      "1936",
+      "1948"
+    ],
+    "answer": "1912"
+  },
+  {
+    "id": "10",
+    "question": "Who of the following athletes has won the maximum number of individual gold medals at a single Olympics?",
+    "options": [
+      "mark sptiz",
+      "michael phelps",
+      "carl lewis",
+      "matt biondi"
+    ],
+    "answer": "michael phelps"
+  }
+]

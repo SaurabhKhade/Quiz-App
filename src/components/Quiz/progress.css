@@ -1,0 +1,57 @@
+.progress {
+  /* border: 1px solid red; */
+  margin-top: auto;
+  display: flex;
+  padding: 10px 5px;
+  --progress: 0;
+  --blue: hsl(211.2,100%,40%);
+}
+
+.progress .icon {
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  border-radius: .3em;
+  padding: .1em;
+}
+
+.bar-wrapper {
+  width: calc(100% - 4rem);
+  /* border: 1px solid yellow; */
+  display: flex;
+  align-items: center;
+  padding: .5rem;
+}
+
+.bar {
+  height: .3rem;
+  width: 100%;
+  border: 1px solid var(--blue);
+  border-radius: 999px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.bar .strip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--progress);
+  /* right: calc(100% - var(--progress)); */
+  background-color: var(--blue);
+  border-radius: 999px;
+}
+
+.bar .ball {
+  position: absolute;
+  height: .5rem;
+  width: .5rem;
+  left: var(--progress);
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
