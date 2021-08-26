@@ -5,4 +5,5 @@
   background-color: hsl(170.8,23.6%,94%);
   display: flex;
   flex-direction: column;
+  align-items: center;
 }

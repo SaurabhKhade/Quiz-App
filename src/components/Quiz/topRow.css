@@ -9,6 +9,7 @@
   font-weight: bold;
   background-color: hsl(170.8,23.6%,80%);
   border-bottom: 1px solid hsl(170.8,23.6%,60%);
+  width: 100%;
 }
 
 .top-row button {
