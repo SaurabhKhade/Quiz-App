@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/oyester-task1/static/css/main.9bdd4f9c.chunk.css",
+    "main.css": "/oyester-task1/static/css/main.900666c2.chunk.css",
     "main.js": "/oyester-task1/static/js/main.b6256206.chunk.js",
     "main.js.map": "/oyester-task1/static/js/main.b6256206.chunk.js.map",
     "runtime-main.js": "/oyester-task1/static/js/runtime-main.fc267bd2.js",
     "runtime-main.js.map": "/oyester-task1/static/js/runtime-main.fc267bd2.js.map",
-    "static/js/2.1ea354eb.chunk.js": "/oyester-task1/static/js/2.1ea354eb.chunk.js",
-    "static/js/2.1ea354eb.chunk.js.map": "/oyester-task1/static/js/2.1ea354eb.chunk.js.map",
+    "static/js/2.2f5e3bc5.chunk.js": "/oyester-task1/static/js/2.2f5e3bc5.chunk.js",
+    "static/js/2.2f5e3bc5.chunk.js.map": "/oyester-task1/static/js/2.2f5e3bc5.chunk.js.map",
     "index.html": "/oyester-task1/index.html",
-    "static/css/main.9bdd4f9c.chunk.css.map": "/oyester-task1/static/css/main.9bdd4f9c.chunk.css.map",
-    "static/js/2.1ea354eb.chunk.js.LICENSE.txt": "/oyester-task1/static/js/2.1ea354eb.chunk.js.LICENSE.txt"
+    "static/css/main.900666c2.chunk.css.map": "/oyester-task1/static/css/main.900666c2.chunk.css.map",
+    "static/js/2.2f5e3bc5.chunk.js.LICENSE.txt": "/oyester-task1/static/js/2.2f5e3bc5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fc267bd2.js",
-    "static/js/2.1ea354eb.chunk.js",
-    "static/css/main.9bdd4f9c.chunk.css",
+    "static/js/2.2f5e3bc5.chunk.js",
+    "static/css/main.900666c2.chunk.css",
     "static/js/main.b6256206.chunk.js"
   ]
 }
