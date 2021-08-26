@@ -17,6 +17,7 @@
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
+  user-select: none;
 }
 
 .options {
@@ -40,6 +41,11 @@
   background-color: hsl(0,0%,85%);
   /* background-color: hsl(170.8,23.6%,80%); */
   text-transform: capitalize;
+  cursor: pointer;
+}
+
+.options p:hover {
+  border: 1px solid black;
 }
 
 .options .selected {
@@ -53,8 +59,13 @@
   border: .1em solid black;
   font-weight: bold;
   font-size: .7rem;
+  cursor: pointer;
 }
 
+.question-box button:hover {
+  background-color: black;
+  color: white;
+}
 
 @media screen and (max-width: 200px) {
   .options {

@@ -15,7 +15,7 @@ export default function Progress({total,setSubmitted}) {
   };
   
   const disabled = {
-    "opacity": current===0?'.5':'1'
+    opacity: current===0?'.5':'1'
   };
   
   function previous() {

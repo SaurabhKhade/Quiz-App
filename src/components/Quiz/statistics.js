@@ -8,7 +8,6 @@ export default function Stats({data}) {
   const dispatch = useDispatch();
 
   for(let i=0; i<data.length; i++) {
-    console.log(answers[i],data[i].answer)
     if (answers[i]===null) unattempt++;
     else if (answers[i]===data[i].answer) correct++;
     else incorrect++;

@@ -18,6 +18,12 @@
   font-weight: bold;
   border: .1em solid black;
   border-radius: .3em;
+  cursor: pointer;
+}
+
+.top-row button:hover {
+  color: white;
+  background-color: black;
 }
 
 .timer {

@@ -9,6 +9,12 @@ html,body,#root {
   box-sizing: border-box;
 }
 
+*:hover,*:active,*:focus {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+}
+
 h1,h2,h3 {
   margin: 10px 0;
 }

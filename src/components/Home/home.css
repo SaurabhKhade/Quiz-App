@@ -28,3 +28,8 @@
   background-color: transparent;
   font-weight: bold;
 }
+
+.home button:hover {
+  background-color: black;
+  color: white;
+}

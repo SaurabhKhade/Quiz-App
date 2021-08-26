@@ -1,4 +1,5 @@
 {
+  "homepage": "https://saurabhkhade.github.io/oyester-task1",
   "name": "oyester-t1",
   "version": "0.1.0",
   "private": true,
@@ -28,6 +29,7 @@
   },
   "browserslist": {
     "production": [
+      "last 30 versions",
       ">0.2%",
       "not dead",
       "not op_mini all"

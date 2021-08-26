@@ -30,6 +30,12 @@
   color: var(--blue);
   border-radius: .3em;
   padding: .1em;
+  cursor: pointer;
+}
+
+.progress .icon:hover {
+  background-color: var(--blue);
+  color: white;
 }
 
 .bar-wrapper {
@@ -56,6 +62,7 @@
   top: 0;
   bottom: 0;
   width: var(--progress);
+  transition: width .2s ease;
   /* right: calc(100% - var(--progress)); */
   background-color: var(--blue);
   border-radius: 999px;
@@ -66,6 +73,7 @@
   height: .5rem;
   width: .5rem;
   left: var(--progress);
+  transition: left .2s ease;
   background-color: var(--blue);
   border: 1px solid var(--blue);
   border-radius: 50%;

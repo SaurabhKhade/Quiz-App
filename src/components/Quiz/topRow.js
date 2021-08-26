@@ -11,6 +11,8 @@ export default function Row({setSubmitted}) {
   let sec = counter%60;
 
   function stopAll() {
+    let ch = window.confirm("Do you really want to stop the current quiz?");
+    if (!ch) return;
     dispatch(resetCounter());
     dispatch(resetAnswers());
     dispatch(resetCurrent());
@@ -19,8 +21,8 @@ export default function Row({setSubmitted}) {
   }
 
   if(counter<0) {
-    alert("Time Over! Quiz will be submitted automatically.");
     clearInterval(intervalId);
+    alert("Time Over! Quiz will be submitted automatically.");
     setSubmitted(true);
   }
   
