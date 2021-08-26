@@ -1,1 +1,1 @@
-# A Quiz App created for oyester assignment task 1
+# A Quiz App created for oyesters trainings assignment task 1
