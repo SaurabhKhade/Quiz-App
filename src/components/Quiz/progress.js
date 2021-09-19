@@ -26,6 +26,8 @@ export default function Progress({total,setSubmitted}) {
   }
 
   function submit() {
+    let ch = window.confirm("Do you really want to submit this quiz?");
+    if (!ch) return;
     clearInterval(intervalId);
     setSubmitted(true);
   }

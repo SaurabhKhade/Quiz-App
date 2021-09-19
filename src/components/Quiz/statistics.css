@@ -25,6 +25,7 @@
 
 .statistics p {
   margin: 10px;
+  font-weight: bold;
 }
 
 .success {
@@ -37,6 +38,10 @@
 
 .warn {
   color: var(--warn);
+}
+
+.simple {
+  color: white;
 }
 
 .pie-wrapper {
