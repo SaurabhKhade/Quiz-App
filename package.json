@@ -1,6 +1,6 @@
 {
-  "homepage": "https://saurabhkhade.github.io/oyester-task1",
-  "name": "oyester-t1",
+  "homepage": "https://saurabhkhade.github.io/Quiz-App/",
+  "name": "quiz_app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
