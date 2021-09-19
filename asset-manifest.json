@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/oyester-task1/static/css/main.900666c2.chunk.css",
-    "main.js": "/oyester-task1/static/js/main.b6256206.chunk.js",
-    "main.js.map": "/oyester-task1/static/js/main.b6256206.chunk.js.map",
-    "runtime-main.js": "/oyester-task1/static/js/runtime-main.fc267bd2.js",
-    "runtime-main.js.map": "/oyester-task1/static/js/runtime-main.fc267bd2.js.map",
-    "static/js/2.2f5e3bc5.chunk.js": "/oyester-task1/static/js/2.2f5e3bc5.chunk.js",
-    "static/js/2.2f5e3bc5.chunk.js.map": "/oyester-task1/static/js/2.2f5e3bc5.chunk.js.map",
-    "index.html": "/oyester-task1/index.html",
-    "static/css/main.900666c2.chunk.css.map": "/oyester-task1/static/css/main.900666c2.chunk.css.map",
-    "static/js/2.2f5e3bc5.chunk.js.LICENSE.txt": "/oyester-task1/static/js/2.2f5e3bc5.chunk.js.LICENSE.txt"
+    "main.css": "/Quiz-App/static/css/main.23d17f96.chunk.css",
+    "main.js": "/Quiz-App/static/js/main.5965c7c2.chunk.js",
+    "main.js.map": "/Quiz-App/static/js/main.5965c7c2.chunk.js.map",
+    "runtime-main.js": "/Quiz-App/static/js/runtime-main.e5062da3.js",
+    "runtime-main.js.map": "/Quiz-App/static/js/runtime-main.e5062da3.js.map",
+    "static/js/2.db97794d.chunk.js": "/Quiz-App/static/js/2.db97794d.chunk.js",
+    "static/js/2.db97794d.chunk.js.map": "/Quiz-App/static/js/2.db97794d.chunk.js.map",
+    "index.html": "/Quiz-App/index.html",
+    "static/css/main.23d17f96.chunk.css.map": "/Quiz-App/static/css/main.23d17f96.chunk.css.map",
+    "static/js/2.db97794d.chunk.js.LICENSE.txt": "/Quiz-App/static/js/2.db97794d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.fc267bd2.js",
-    "static/js/2.2f5e3bc5.chunk.js",
-    "static/css/main.900666c2.chunk.css",
-    "static/js/main.b6256206.chunk.js"
+    "static/js/runtime-main.e5062da3.js",
+    "static/js/2.db97794d.chunk.js",
+    "static/css/main.23d17f96.chunk.css",
+    "static/js/main.5965c7c2.chunk.js"
   ]
 }
